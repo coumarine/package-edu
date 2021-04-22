@@ -10,7 +10,4 @@ public class checking {
         System.out.println("Second method is :" + param);
     }
 
-    public static void thirdMethod(String param){
-        System.out.println("Third method is :" + param);
-    }
 }
