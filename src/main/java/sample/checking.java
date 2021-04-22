@@ -1,7 +1,6 @@
 package sample;
 
 import org.openqa.selenium.WebDriver;
-import org.seleniumhq.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
