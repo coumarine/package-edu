@@ -17,7 +17,6 @@ public class checking {
     public static WebDriver createChromeDriver(){
         WebDriver driver = new ChromeDriver();
         return driver;
-
     }
 
 }
