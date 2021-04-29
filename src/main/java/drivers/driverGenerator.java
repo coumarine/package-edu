@@ -1,5 +1,7 @@
 package drivers;
 
+import com.paulhammant.ngwebdriver.NgWebDriver;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -14,6 +16,17 @@ import org.openqa.selenium.safari.SafariDriver;
 import static org.openqa.selenium.remote.BrowserType.*;
 
 public class driverGenerator {
+
+    private static NgWebDriver ngWebDriver;
+
+    public static void setNgWebDriver(NgWebDriver ngWebDriver) {
+        driverGenerator.ngWebDriver = ngWebDriver;
+    }
+
+    public static NgWebDriver getNgWebDriver() {
+        return ngWebDriver;
+    }
+
     public static WebDriver newDriver(String driverType) {
 
         Object driver;
@@ -38,6 +51,9 @@ public class driverGenerator {
                 driver = new ChromeDriver(options);
         }
 
+        if (driver != null) {
+            setNgWebDriver(new NgWebDriver((JavascriptExecutor)driver));
+        }
 
         return (WebDriver) driver;
     }
