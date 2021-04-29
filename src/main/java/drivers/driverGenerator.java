@@ -14,7 +14,7 @@ import org.openqa.selenium.safari.SafariDriver;
 import static org.openqa.selenium.remote.BrowserType.*;
 
 public class driverGenerator {
-    public WebDriver newDriver(String driverType) {
+    public static WebDriver newDriver(String driverType) {
 
         Object driver;
         switch(driverType) {
